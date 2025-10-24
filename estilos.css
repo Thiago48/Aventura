@@ -1,0 +1,83 @@
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  background: linear-gradient(to bottom, #000010, #0b0025);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  animation: fondo 10s infinite alternate ease-in-out;
+}
+
+@keyframes fondo {
+  from { filter: brightness(1) saturate(1); }
+  to { filter: brightness(0.8) saturate(1.5); }
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #ffcc00;
+  text-shadow: 0 0 15px yellow;
+}
+
+p {
+  font-size: 1.2em;
+  width: 80%;
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 1.5em;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+a.boton {
+  background-color: #0077ff;
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+a.boton:hover {
+  background-color: #ffcc00;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px yellow;
+}
+
+.imagen {
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+  margin: 10px auto;
+  transition: transform 0.4s ease;
+}
+
+.imagen:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.final {
+  background: radial-gradient(circle, #000015 10%, #0b0025 90%);
+}

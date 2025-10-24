@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TP2: Star Wars </title>
+<style>
+  
+  body {
+    background: radial-gradient(ellipse at bottom, #0a0a0a 0%, #000000 100%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 40px;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Animación de estrellas */
+  @keyframes estrellas {
+    from {background-position: 0 0, 0 0;}
+    to {background-position: 10000px 5000px, -10000px -5000px;}
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 200%;
+    height: 200%;
+    background-image: 
+      radial-gradient(white 1px, transparent 1px),
+      radial-gradient(white 1px, transparent 1px);
+    background-size: 100px 100px, 150px 150px;
+    background-position: 0 0, 50px 50px;
+    animation: estrellas 100s linear infinite;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  h1 {
+    color: yellow;
+    text-shadow: 0 0 20px gold, 0 0 40px orange;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: brillar 2s infinite alternate;
+  }
+
+  @keyframes brillar {
+    from { text-shadow: 0 0 10px gold; }
+    to { text-shadow: 0 0 30px yellow; }
+  }
+
+  h2 {
+    color: #00eaff;
+    font-style: italic;
+  }
+
+  
+  .Imperio {
+    background-color: rgba(255, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 60%;
+    box-shadow: 0 0 15px red;
+  }
+
+  .Rebeldes {
+    background-color: rgba(0, 0, 255, 0.4);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 60%;
+    box-shadow: 0 0 15px blue;
+  }
+
+  
+  #DarthVader {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px red;
+  }
+
+  #Luke {
+    font-style: italic;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px cyan;
+  }
+
+  
+  .Soldados {
+    border: 3px dashed white;
+    letter-spacing: 3px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 60%;
+    background-color: rgba(255,255,255,0.05);
+  }
+
+  .Apoyo {
+    text-align: center;
+    margin: 10px auto;
+    width: 60%;
+    color: #ffdd88;
+  }
+
+ 
+  .Naves {
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 10px auto;
+    width: 60%;
+    border-bottom: 2px solid gray;
+    color: #00ff99;
+  }
+
+  .Droides img {
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    transition: transform 0.3s ease;
+  }
+
+  .Droides img:hover {
+    transform: scale(1.2) rotate(3deg);
+  }
+
+  .seccion {
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Star Wars</h1>
+  <h2>Que la Fuerza te acompañe</h2>
+
+  <div class="Imperio seccion">
+    <h3>Imperio</h3>
+    <p id="DarthVader">Darth Vader</p>
+    <p class="Soldados">Stormtroopers</p>
+    <p class="Apoyo">Oficiales del Imperio</p>
+  </div>
+
+  <div class="Rebeldes seccion">
+    <h3>Rebeldes</h3>
+    <p id="Luke">Luke Skywalker</p>
+    <p class="Naves">X-Wing, Millennium Falcon</p>
+    <div class="Droides">
+      <img src="https://upload.wikimedia.org/wikipedia/en/3/39/R2-D2_Droid.png" alt="R2-D2">
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/C-3PO_droid.png" alt="C-3PO">
+    </div>
+  </div>
+
+</body>
+</html>

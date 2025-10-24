@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panchito</title>
+<style>
+  body {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .panchito {
+    position: relative;
+    width: 300px;
+    height: 120px;
+  }
+
+  .pan-arriba {
+    width: 300px;
+    height: 40px;
+    background-color: #f4c16c;
+    border-radius: 100px 100px 20px 20px;
+    position: absolute;
+    top: 0;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+
+  .salchicha {
+    width: 260px;
+    height: 40px;
+    background-color: #d14b33;
+    border-radius: 40px;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+  }
+
+  
+  .pan-abajo {
+    width: 300px;
+    height: 40px;
+    background-color: #f4c16c;
+    border-radius: 20px 20px 100px 100px;
+    position: absolute;
+    bottom: 0;
+    box-shadow: inset 0 -5px 10px rgba(0,0,0,0.1);
+  }
+
+  .panchito * {
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+    <div class="panchito">
+    <div class="pan-arriba"></div>
+    <div class="salchicha"></div>
+    <div class="pan-abajo"></div>
+  </div>
+</body>
+</html>
